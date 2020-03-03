@@ -12,25 +12,25 @@ class UARTrackableNotifyComponent;
 UCLASS()
 class ARLOWRIDERDEMO_API AARCustomPawn : public APawn
 {
-	GENERATED_BODY()
-
+    GENERATED_BODY()
+    
 public:
-	
-	AARCustomPawn();
+    
+    AARCustomPawn();
     
     UPROPERTY(Category = ApplicationLifecycle, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
     UApplicationLifecycleComponent* ApplicationLifecycleComponent;
     
     UPROPERTY(Category = TrackableNotify, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
     UARTrackableNotifyComponent * ARTrackableNotifyComponent;
-
+    
 protected:
-	
-	virtual void BeginPlay() override;
-
+    
+    virtual void BeginPlay() override;
+    
 public:	
-	
-	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+    
+    virtual void Tick(float DeltaTime) override;
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    
 };
